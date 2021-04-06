@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fynlog": {
+      "hosting": {
+        "fynlog": [
+          "fynlog"
+        ]
+      }
+    }
+  }
+}

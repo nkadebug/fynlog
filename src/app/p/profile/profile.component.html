@@ -1,0 +1,24 @@
+<mat-card *ngIf="auth.auth.user | async as user; else showLogin">
+  <mat-card-header>
+    <div mat-card-avatar style.background-image="url('{{user.photoURL}}')"></div>
+    <mat-card-title>{{user.displayName}}</mat-card-title>
+    <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Email Verified : <mat-icon>{{user.emailVerified ? 'verified' : 'highlight_off'}}</mat-icon>
+    </p>
+    <p>
+      Sign Up Time : {{user.metadata.creationTime | date:'dd-MMM-yy hh:mm'}}
+    </p>
+    <p>
+      Last Sign In Time : {{user.metadata.lastSignInTime | date:'dd-MMM-yy hh:mm'}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Log Out</button>
+  </mat-card-actions>
+</mat-card>
+<ng-template #showLogin>
+  Login
+</ng-template>

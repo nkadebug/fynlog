@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <!-- <button mat-button routerLink="home">
+    <span style="font-size: large;">FynLog</span>
+  </button> -->
+  <a routerLink="">{{title}}</a>
+  <span class="spacer"></span>
+  <button mat-icon-button routerLink="summary">
+    <mat-icon>poll</mat-icon>
+  </button>
+
+  <button *ngIf="auth.auth.user | async as user; else showLogin" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+  </button>
+
+  <ng-template #showLogin>
+    <button mat-icon-button (click)="auth.login()">
+      <mat-icon>login</mat-icon>
+    </button>
+  </ng-template>
+
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="profile">
+    <mat-icon>info</mat-icon>
+    <span>Profile</span>
+  </button>
+  <button mat-menu-item (click)="auth.logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Log Out</span>
+  </button>
+</mat-menu>
+
+<button mat-fab color="accent" routerLink="transaction/new">
+  <mat-icon>add</mat-icon>
+</button>
