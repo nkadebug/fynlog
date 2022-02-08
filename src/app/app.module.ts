@@ -12,7 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import {MatRadioModule} from '@angular/material/radio'
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input'; 
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -47,7 +49,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     MatButtonModule, 
     MatMenuModule, 
     MatCardModule, 
-    MatRadioModule,
+    MatSelectModule,
+    MatInputModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: environment.production,
   // Register the ServiceWorker as soon as the app is stable

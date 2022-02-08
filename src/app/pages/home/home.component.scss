@@ -2,3 +2,7 @@
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
+[mat-fab]{
+  position: fixed; bottom: 1rem; right: 1rem;
+  z-index: 1000;
+}
