@@ -12,17 +12,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio'
 
-import { HeaderComponent } from './c/header/header.component';
-import { HomeComponent } from './p/home/home.component';
-import { SummaryComponent } from './p/summary/summary.component';
-import { TransactionComponent } from './p/transaction/transaction.component';
-import { P404Component } from './p/p404/p404.component';
-import { FooterComponent } from './c/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SummaryComponent } from './pages/summary/summary.component';
+import { TransactionComponent } from './pages/transaction/transaction.component';
+import { P404Component } from './pages/p404/p404.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './c/toolbar/toolbar.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { ProfileComponent } from './p/profile/profile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,12 @@ import { ProfileComponent } from './p/profile/profile.component';
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule, MatButtonModule, MatMenuModule, MatCardModule, ServiceWorkerModule.register('ngsw-worker.js', {
+    MatIconModule, 
+    MatButtonModule, 
+    MatMenuModule, 
+    MatCardModule, 
+    MatRadioModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: environment.production,
   // Register the ServiceWorker as soon as the app is stable
   // or after 30 seconds (whichever comes first).

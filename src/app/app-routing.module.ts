@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './p/home/home.component';
-import { SummaryComponent } from './p/summary/summary.component';
-import { TransactionComponent } from './p/transaction/transaction.component';
-import { P404Component } from './p/p404/p404.component';
-import { ProfileComponent } from './p/profile/profile.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SummaryComponent } from './pages/summary/summary.component';
+import { TransactionComponent } from './pages/transaction/transaction.component';
+import { P404Component } from './pages/p404/p404.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {

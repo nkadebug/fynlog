@@ -8,7 +8,7 @@
     <mat-icon>poll</mat-icon>
   </button>
 
-  <button *ngIf="auth.auth.user | async as user; else showLogin" mat-icon-button [matMenuTriggerFor]="menu">
+  <button *ngIf="auth.auth.user | async as user; else showLogin" mat-icon-button routerLink="/profile">
     <mat-icon>person</mat-icon>
   </button>
 
@@ -20,7 +20,7 @@
 
 </mat-toolbar>
 
-<mat-menu #menu="matMenu">
+<!-- <mat-menu #menu="matMenu">
   <button mat-menu-item routerLink="profile">
     <mat-icon>info</mat-icon>
     <span>Profile</span>
@@ -29,7 +29,7 @@
     <mat-icon>logout</mat-icon>
     <span>Log Out</span>
   </button>
-</mat-menu>
+</mat-menu> -->
 
 <button mat-fab color="accent" routerLink="transaction/new">
   <mat-icon>add</mat-icon>
