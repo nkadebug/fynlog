@@ -15,6 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input'; 
+import {MatChipsModule} from '@angular/material/chips';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -50,7 +52,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
     MatMenuModule, 
     MatCardModule, 
     MatSelectModule,
+    MatRadioModule,
     MatInputModule,
+    MatChipsModule,
+    MatTabsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: environment.production,
   // Register the ServiceWorker as soon as the app is stable
